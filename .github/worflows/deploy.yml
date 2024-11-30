@@ -27,6 +27,11 @@ jobs:
     # Step 4: 构建项目
     - name: Build project
       run: gulp dist
+      
+    - name: Debug generated files
+      run: |
+        echo "Generated files in publish_dir:"
+        ls -al ./dist
 
     # Step 5: 部署到 gh-pages 分支
     - name: Deploy to GitHub Pages
